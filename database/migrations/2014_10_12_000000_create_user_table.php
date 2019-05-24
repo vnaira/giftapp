@@ -16,12 +16,12 @@ class CreateUserTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->default('');
-            $table->string('username');
+            $table->string('name');
+            $table->string('username')->default('');
             $table->date('date_of_birth')->default(Carbon::now()->toDateTimeString());
             $table->string('email')->unique();
             $table->string('avatar')->default('default.jpg');
-            $table->string('password');
+            $table->string('password')->nullable();
 //            $table->string('token');
             $table->integer('active')->default(0);
             $table->rememberToken();

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\GiftList;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
@@ -36,6 +37,7 @@ class IndexController extends Controller {
     //    return view('template')->withName('Nameeeee');
   }
   public function home(){
-    return view('home');
+    $giftlist = GiftList::all();
+    return view('home', compact('giftlist',$giftlist));
   }
 }

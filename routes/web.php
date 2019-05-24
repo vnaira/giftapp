@@ -31,8 +31,9 @@ Route::get('/home', 'IndexController@home')->name('home');
 
 //facebook socialite
 
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
-Auth::routes();
+Route::get('login/facebook', 'SocialAuthFacebookController@redirect');
+Route::get('login/facebook/callback', 'SocialAuthFacebookController@callback');
+Route::get('login/google', 'SocialAuthGoogleController@redirect');
+Route::get('login/google/callback', 'SocialAuthGoogleController@callback');
 
-Route::get('/home', 'HomeController@index')->name('home');
+  Route::post('/giftlist', 'GiftListController@store')->name('giftlist');

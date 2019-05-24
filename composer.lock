@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8190f301cb8f00b01ac0feffcdfc17d1",
+    "content-hash": "1bfadef54e602cb520fb808c33802315",
     "packages": [
         {
             "name": "defuse/php-encryption",
@@ -430,6 +430,73 @@
             "time": "2017-06-27T22:17:23+00:00"
         },
         {
+            "name": "genealabs/laravel-casts",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeneaLabs/laravel-casts.git",
+                "reference": "0fe9e875ab1822ea1b12f81be6321367c026b203"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeneaLabs/laravel-casts/zipball/0fe9e875ab1822ea1b12f81be6321367c026b203",
+                "reference": "0fe9e875ab1822ea1b12f81be6321367c026b203",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.5 - 5.8",
+                "jenssegers/model": "*",
+                "laravelcollective/html": "5.5 - 5.8",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "fzaninotto/faker": "*",
+                "mockery/mockery": "*",
+                "orchestra/database": "3.8.x-dev",
+                "orchestra/testbench": "3.8.*",
+                "orchestra/testbench-browser-kit": "3.8.*",
+                "php-coveralls/php-coveralls": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "*",
+                "sebastian/phpcpd": "*",
+                "symfony/thanks": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "dont-discover": [
+                        "laravelcollective/html"
+                    ],
+                    "providers": [
+                        "GeneaLabs\\LaravelCasts\\Providers\\Service"
+                    ],
+                    "aliases": {
+                        "Form": "GeneaLabs\\LaravelCasts\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "classmap": [],
+                "psr-4": {
+                    "GeneaLabs\\LaravelCasts\\": "src/",
+                    "GeneaLabs\\LaravelCasts\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "GeneaLabs, LLC",
+                    "email": "hello@genealabs.com"
+                }
+            ],
+            "description": "Useful form macros for Laravel's Blade template engine.",
+            "time": "2019-03-01T23:46:09+00:00"
+        },
+        {
             "name": "guzzle/guzzle",
             "version": "v3.9.3",
             "source": {
@@ -795,6 +862,54 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jenssegers/model",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/model.git",
+                "reference": "eedaeedc1977bb78f69dbb1c5893d0c994958790"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/model/zipball/eedaeedc1977bb78f69dbb1c5893d0c994958790",
+                "reference": "eedaeedc1977bb78f69dbb1c5893d0c994958790",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^5.0",
+                "illuminate/support": "^4.0|^5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "^0.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Model\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "An Laravel eloquent-like model class, for Laravel and other frameworks",
+            "homepage": "https://github.com/jenssegers/model",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "model"
+            ],
+            "time": "2018-07-21T14:41:19+00:00"
         },
         {
             "name": "laravel/framework",

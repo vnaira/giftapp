@@ -32,12 +32,22 @@ class ProfileController extends Controller{
       'days' => $days
     ];
 
-//    print_r($this->request->all());
-    print_r($this->request->only('year', 'month'));
-    print_r($this->request->except('year', 'month'));
-    echo $this->request->name;
-    if($this->request->has('name'))
-    echo $this->request->input('name');
+    if($this->request->isMethod('post')){
+      //    print_r($this->request->all());
+//      print_r($this->request->only('year', 'month'));
+//      print_r($this->request->except('year', 'month'));
+//      echo $this->request->name;
+//      if($this->request->has('name'))
+//        echo $this->request->input('name');
+
+      //validationic heto
+//      ete formi validacian chi ancnum
+      $this->request->flash();  //      u vorpisi lracracnery noric mnan, pahum enq sessioni mej
+//      $this->request->flashOnly('name','gender');
+      return redirect(); //vor het ga noric nuyn ejin
+
+    }
+
     if(view()->exists('profile')){
       return view('profile', $data)->withTitle('My Profile');
     }

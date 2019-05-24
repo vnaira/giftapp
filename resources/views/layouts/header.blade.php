@@ -33,7 +33,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     <li><a href="{{ route('home') }}">@upperText(Wedding)</a></li>
-                    <li><a href="{{ route('profile') }}">Baby</a></li>
+                    <li><a href="{{ route('profile') }}">@upperText(Baby)</a></li>
                     <li><a href="{{ route('login') }}">Wishllist</a></li>
                     <li><a href="{{ route('login') }}">Gift Solution</a></li>
                     @guest
@@ -62,7 +62,6 @@
                                 </ul>
                             </li>
                             @endguest
-
                 </ul>
             </div>
         </div>
